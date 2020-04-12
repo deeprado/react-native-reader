@@ -105,13 +105,15 @@ class Charts extends Component {
         ) : (
           <ScrollView style={styles.body} showsVerticalScrollIndicator={false}>
             <Text style={styles.listHeader}>男生</Text>
-            <FlatList
-              data={charts.male}
-              renderItem={this.renderMainItem.bind(this)}
-              keyExtractor={(item, index) => {
-                return 'rank_male' + index.toString();
-              }}
-            />
+            <View>
+              <FlatList
+                data={charts.male}
+                renderItem={this.renderMainItem.bind(this)}
+                keyExtractor={(item, index) => {
+                  return 'rank_male' + index.toString();
+                }}
+              />
+            </View>
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={() => this._showMaleCollapse()}>
@@ -123,23 +125,27 @@ class Charts extends Component {
                 <Text style={styles.itemTitle}>更多排行榜</Text>
               </View>
             </TouchableOpacity>
-            {this.state.showMaleOther ? (
+            <View>
+              {this.state.showMaleOther ? (
+                <FlatList
+                  data={charts.maleOther}
+                  renderItem={this.renderOtherItem.bind(this)}
+                  keyExtractor={(item, index) => {
+                    return 'rank_male_other' + index.toString();
+                  }}
+                />
+              ) : null}
+            </View>
+            <Text style={styles.listHeader}>女生</Text>
+            <View>
               <FlatList
-                data={charts.maleOther}
-                renderItem={this.renderOtherItem.bind(this)}
+                data={charts.female}
+                renderItem={this.renderMainItem.bind(this)}
                 keyExtractor={(item, index) => {
-                  return 'rank_male_other' + index.toString();
+                  return 'rank_female' + index.toString();
                 }}
               />
-            ) : null}
-            <Text style={styles.listHeader}>女生</Text>
-            <FlatList
-              data={charts.female}
-              renderItem={this.renderMainItem.bind(this)}
-              keyExtractor={(item, index) => {
-                return 'rank_female' + index.toString();
-              }}
-            />
+            </View>
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={() => this._showFemaleCollapse()}>
@@ -151,16 +157,18 @@ class Charts extends Component {
                 <Text style={styles.itemTitle}>更多排行榜</Text>
               </View>
             </TouchableOpacity>
-            {this.state.showFemaleOther ? (
-              <FlatList
-                enableEmptySections={true}
-                data={charts.femaleOther}
-                renderItem={this.renderOtherItem.bind(this)}
-                keyExtractor={(item, index) => {
-                  return 'rank_female_other' + index.toString();
-                }}
-              />
-            ) : null}
+            <View>
+              {this.state.showFemaleOther ? (
+                <FlatList
+                  enableEmptySections={true}
+                  data={charts.femaleOther}
+                  renderItem={this.renderOtherItem.bind(this)}
+                  keyExtractor={(item, index) => {
+                    return 'rank_female_other' + index.toString();
+                  }}
+                />
+              ) : null}
+            </View>
           </ScrollView>
         )}
       </View>

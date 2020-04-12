@@ -2,10 +2,10 @@
  * description: the api for app
  */
 
-const API_BASE_URL = 'http://api.zhuishushenqi.com';
-const IMG_BASE_URL = 'http://statics.zhuishushenqi.com';
+const API_BASE_URL = 'https://api.zhuishushenqi.com';
+const IMG_BASE_URL = 'https://statics.zhuishushenqi.com';
 
-module.exports = {
+export default {
   API_BASE_URL: API_BASE_URL,
   IMG_BASE_URL: IMG_BASE_URL,
 
