@@ -53,9 +53,10 @@ export default class MyFattenList extends Component {
     });
   }
 
-  renderBookList({item: rowData}) {
+  renderBookList({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._readBook(rowData.bookId)}>
         <View style={styles.item}>
@@ -95,12 +96,7 @@ export default class MyFattenList extends Component {
             }}
           />
         ) : (
-          <View
-            style={{
-              marginTop: 30,
-            }}>
-            <CommonText text="你还没有保存过书单~~~" />
-          </View>
+          <CommonText text="你还没有保存过书单~~~" />
         )}
       </View>
     );

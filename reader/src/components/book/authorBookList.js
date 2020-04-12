@@ -72,6 +72,7 @@ export default class AuthorBookList extends Component {
   renderBookList({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookDetail(rowData._id)}>
         <View style={styles.item}>

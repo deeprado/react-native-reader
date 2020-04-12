@@ -135,6 +135,7 @@ class BookReview extends Component {
   renderBookReview({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookReviewDetail(rowData._id)}>
         <View style={styles.item}>
@@ -170,7 +171,8 @@ class BookReview extends Component {
                 alignItems: 'center',
               }}>
               <Icon
-                name="ios-thumbs-up-outline"
+                type="feather"
+                name="thumbs-up"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -214,6 +216,9 @@ class BookReview extends Component {
             onEndReachedThreshold={30}
             renderItem={this.renderBookReview.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

@@ -57,9 +57,10 @@ class ChartsDetailOther extends Component {
     });
   }
 
-  renderMainItem({item: rowData}) {
+  renderMainItem({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToChartsDetail(rowData._id)}>
         <View style={styles.item}>
@@ -74,7 +75,11 @@ class ChartsDetailOther extends Component {
           <View style={styles.itemBody}>
             <Text style={styles.itemTitle}>{rowData.title}</Text>
             <Text style={styles.itemDesc}>
-              {rowData.author + ' | ' + rowData.cat ? rowData.cat : '未知'}
+              {rowData.author + ' | ' + rowData.cat
+                ? rowData.cat
+                : rowData.majorCate
+                ? rowData.majorCate
+                : '未知'}
             </Text>
             <Text style={styles.itemDesc} numberOfLines={1}>
               {rowData.shortIntro}
@@ -112,6 +117,9 @@ class ChartsDetailOther extends Component {
             data={charts.chartsDetailBooks}
             ListFooterComponent={this.renderFooter.bind(this)}
             renderItem={this.renderMainItem.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

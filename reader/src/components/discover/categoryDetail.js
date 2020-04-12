@@ -98,7 +98,7 @@ export default class CategoryDetail extends Component {
         <ToolBar
           leftClick={this._back.bind(this)}
           title={this.state.minor === '' ? this.props.major : this.state.minor}
-          rightIcon="ios-stats-outline"
+          rightIcon="bar-chart-2"
           rightClick={this._showChooseBox.bind(this)}
         />
         <ScrollableTabView

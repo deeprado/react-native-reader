@@ -13,7 +13,7 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import {connect} from 'react-redux';
 
 import config from '../../common/config';
@@ -107,6 +107,7 @@ class BookHelp extends Component {
   renderBookHelp({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookHelpDetail(rowData._id)}>
         <View style={styles.item}>
@@ -139,7 +140,8 @@ class BookHelp extends Component {
                 alignItems: 'center',
               }}>
               <Icon
-                name="ios-chatbubbles-outline"
+                type="feather"
+                name="message-square"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -178,6 +180,9 @@ class BookHelp extends Component {
             onEndReachedThreshold={30}
             renderItem={this.renderBookHelp.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

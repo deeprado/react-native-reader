@@ -479,6 +479,7 @@ export default class ReadPlatform extends Component {
   renderListModal({item: rowData, index: rowID}) {
     return (
       <TouchableOpacity
+        key={rowID}
         activeOpacity={0.5}
         onPress={() => this._clickListModalItem(parseInt(rowID))}>
         {this.state.chapterNum !== parseInt(rowID) ? (
@@ -528,9 +529,9 @@ export default class ReadPlatform extends Component {
     );
   }
 
-  renderItem({item: rowData}) {
+  renderItem({item: rowData, index}) {
     return (
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row'}} key={index}>
         <TouchableOpacity
           style={{height: Dimen.window.height, width: Dimen.window.width}}
           activeOpacity={1}>

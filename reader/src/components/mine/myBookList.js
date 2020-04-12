@@ -54,6 +54,7 @@ export default class MyBookList extends Component {
   renderBookList({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookListDetail(rowData.id)}>
         <View style={styles.item}>
@@ -88,12 +89,15 @@ export default class MyBookList extends Component {
     return (
       <View style={styles.container}>
         <ToolBar leftClick={this._back.bind(this)} title="我的书单" />
-        {this.state.myBookList ? (
+        {this.state.myBookList.length > 0 ? (
           <FlatList
             style={styles.body}
             enableEmptySections={true}
             data={this.state.myBookList}
             renderItem={this.renderBookList.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         ) : (
           <CommonText text="你还没有保存过书单~~~" />

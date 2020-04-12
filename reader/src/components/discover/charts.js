@@ -19,7 +19,7 @@ import {connect} from 'react-redux';
 import config from '../../common/config';
 import Dimen from '../../utils/dimensionsUtil';
 import api from '../../common/api';
-import {charts} from '../../actions/chartsAction';
+import {charts as getCharts} from '../../actions/chartsAction';
 import Loading from '../../weight/loading';
 import ToolBar from '../../weight/toolBar';
 
@@ -35,7 +35,7 @@ class Charts extends Component {
   componentDidMount() {
     const {dispatch} = this.props;
     InteractionManager.runAfterInteractions(() => {
-      dispatch(charts());
+      dispatch(getCharts());
     });
   }
 
@@ -96,6 +96,7 @@ class Charts extends Component {
   }
 
   render() {
+    const {charts} = this.props;
     return (
       <View style={styles.container}>
         <ToolBar leftClick={this._back.bind(this)} title="排行榜" />
@@ -105,7 +106,6 @@ class Charts extends Component {
           <ScrollView style={styles.body} showsVerticalScrollIndicator={false}>
             <Text style={styles.listHeader}>男生</Text>
             <FlatList
-              enableEmptySections={true}
               data={charts.male}
               renderItem={this.renderMainItem.bind(this)}
               keyExtractor={(item, index) => {
@@ -125,7 +125,6 @@ class Charts extends Component {
             </TouchableOpacity>
             {this.state.showMaleOther ? (
               <FlatList
-                enableEmptySections={true}
                 data={charts.maleOther}
                 renderItem={this.renderOtherItem.bind(this)}
                 keyExtractor={(item, index) => {
@@ -135,7 +134,6 @@ class Charts extends Component {
             ) : null}
             <Text style={styles.listHeader}>女生</Text>
             <FlatList
-              enableEmptySections={true}
               data={charts.female}
               renderItem={this.renderMainItem.bind(this)}
               keyExtractor={(item, index) => {

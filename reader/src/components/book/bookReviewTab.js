@@ -13,7 +13,7 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import {connect} from 'react-redux';
 
 import config from '../../common/config';
@@ -98,6 +98,7 @@ class BookReviewTab extends Component {
   renderBookReview({row: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookReviewDetail(rowData._id)}>
         <View style={styles.item}>
@@ -134,7 +135,8 @@ class BookReviewTab extends Component {
                 alignItems: 'center',
               }}>
               <Icon
-                name="ios-thumbs-up-outline"
+                type="feather"
+                name="thumbs-up"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -175,6 +177,9 @@ class BookReviewTab extends Component {
             onEndReachedThreshold={30}
             renderItem={this.renderBookReview.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

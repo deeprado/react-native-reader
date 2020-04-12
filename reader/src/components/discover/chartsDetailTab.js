@@ -68,9 +68,10 @@ export default class ChartsDetailTab extends Component {
     });
   }
 
-  renderBookList({item: rowData}) {
+  renderBookList({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookDetail(rowData._id)}>
         <View style={styles.item}>
@@ -85,7 +86,9 @@ export default class ChartsDetailTab extends Component {
           <View style={styles.itemBody}>
             <Text style={styles.itemTitle}>{rowData.title}</Text>
             <Text style={styles.itemDesc}>
-              {rowData.author + ' | ' + (rowData.cat ? rowData.cat : '其他')}
+              {rowData.author +
+                ' | ' +
+                (rowData.cat ? rowData.cat : rowData.majorCate)}
             </Text>
             <Text style={styles.itemDesc} numberOfLines={1}>
               {rowData.shortIntro}
@@ -117,6 +120,9 @@ export default class ChartsDetailTab extends Component {
             data={this.state.chartsDetailBooks}
             ListFooterComponent={this.renderFooter.bind(this)}
             renderItem={this.renderBookList.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

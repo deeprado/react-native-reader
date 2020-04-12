@@ -109,6 +109,7 @@ export default class TagBookList extends Component {
   renderBookList({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._goToBookDetail(rowData._id)}>
         <View style={styles.item}>
@@ -163,6 +164,9 @@ export default class TagBookList extends Component {
             onEndReachedThreshold={30}
             renderItem={this.renderBookList.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

@@ -12,7 +12,7 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import {connect} from 'react-redux';
 
 import config from '../../common/config';
@@ -80,7 +80,7 @@ class BookDiscussionDetail extends Component {
 
   renderBookDiscussionCommentBest({item: rowData, index}) {
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={index}>
         <Image
           style={styles.itemImage}
           source={
@@ -103,7 +103,8 @@ class BookDiscussionDetail extends Component {
                 marginRight: 14,
               }}>
               <Icon
-                name="ios-heart-outline"
+                type="feather"
+                name="heart"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -118,9 +119,9 @@ class BookDiscussionDetail extends Component {
     );
   }
 
-  renderBookDiscussionComment(rowData) {
+  renderBookDiscussionComment({item: rowData, index}) {
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={index}>
         <Image
           style={styles.itemImage}
           source={
@@ -197,6 +198,9 @@ class BookDiscussionDetail extends Component {
                   enableEmptySections={true}
                   data={bookDiscussion.bookDiscussionDetailCommentBest}
                   renderItem={this.renderBookDiscussionCommentBest.bind(this)}
+                  keyExtractor={(item, index) => {
+                    return index.toString();
+                  }}
                 />
               </View>
             ) : null}
@@ -243,6 +247,9 @@ class BookDiscussionDetail extends Component {
             renderItem={this.renderBookDiscussionComment.bind(this)}
             ListHeaderComponent={this.renderHeader.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

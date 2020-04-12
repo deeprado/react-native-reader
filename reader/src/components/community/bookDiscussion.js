@@ -13,7 +13,7 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import {connect} from 'react-redux';
 
 import config from '../../common/config';
@@ -144,20 +144,23 @@ class BookDiscussion extends Component {
                 alignItems: 'center',
               }}>
               <Icon
-                name="ios-chatbubbles-outline"
+                type="feather"
+                name="message-square"
                 size={15}
                 color={config.css.fontColor.desc}
               />
               <Text style={styles.itemDesc}>{rowData.commentCount}</Text>
               <Icon
-                name="ios-stats-outline"
+                type="feather"
+                name="bar-chart-2"
                 size={15}
                 style={{marginLeft: 10}}
                 color={config.css.fontColor.desc}
               />
               <Text style={styles.itemDesc}>{rowData.voteCount}</Text>
               <Icon
-                name="ios-heart-outline"
+                type="feather"
+                name="heart"
                 size={15}
                 style={{marginLeft: 10}}
                 color={config.css.fontColor.desc}

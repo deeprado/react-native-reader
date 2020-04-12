@@ -183,6 +183,7 @@ class Search extends Component {
   renderAutoComplete({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._changeSearchWord(rowData.word)}
         style={styles.autoItem}>
@@ -194,6 +195,7 @@ class Search extends Component {
   renderSearchData({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._startReadDetail(rowData)}>
         <View style={styles.item}>
@@ -224,6 +226,7 @@ class Search extends Component {
   renderSearchHistory({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={() => this._changeSearchWord(rowData.word)}>
         <View style={styles.historyItem}>
@@ -272,6 +275,9 @@ class Search extends Component {
               enableEmptySections={true}
               data={search.searchData}
               renderItem={this.renderSearchData.bind(this)}
+              keyExtractor={(item, index) => {
+                return index.toString();
+              }}
             />
           ) : (
             // 显示历史记录和热门搜索
@@ -321,9 +327,11 @@ class Search extends Component {
                 </Text>
               </View>
               <FlatList
-                enableEmptySections={true}
                 data={this.state.searchHistory}
                 renderItem={this.renderSearchHistory.bind(this)}
+                keyExtractor={(item, index) => {
+                  return index.toString();
+                }}
               />
             </View>
           )}
@@ -333,6 +341,9 @@ class Search extends Component {
               enableEmptySections={true}
               data={search.autoComplete}
               renderItem={this.renderAutoComplete.bind(this)}
+              keyExtractor={(item, index) => {
+                return index.toString();
+              }}
             />
           ) : null}
         </ScrollView>

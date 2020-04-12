@@ -160,9 +160,10 @@ export default class Bookshelves extends Component {
     });
   }
 
-  renderBookshelves({item: rowData}) {
+  renderBookshelves({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onLongPress={() => this._showModal(rowData)}
         onPress={() => this._readBook(rowData.bookId)}>

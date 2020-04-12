@@ -14,9 +14,7 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import {connect} from 'react-redux';
-import ScrollableTabView, {
-  DefaultTabBar,
-} from 'react-native-scrollable-tab-view';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
 import TabBarOnlyText from '../../weight/TabBarOnlyText';
 import ToolBar from '../../weight/toolBar';
@@ -61,9 +59,7 @@ export default class BookCommunity extends Component {
       for (let i = 0; i < array.length; i++) {
         let element = array[i];
         let iconName =
-          element.sort === this.state.sort
-            ? 'ios-checkmark-circle'
-            : 'ios-checkmark-circle-outline';
+          element.sort === this.state.sort ? 'check' : 'check-circle';
         items.push(
           <TouchableOpacity
             key={i}
@@ -94,7 +90,7 @@ export default class BookCommunity extends Component {
         <ToolBar
           leftClick={this._back.bind(this)}
           title="主题书单"
-          rightIcon="ios-stats-outline"
+          rightIcon="bar-chart-2"
           rightClick={this._showTags.bind(this)}
         />
         <ScrollableTabView

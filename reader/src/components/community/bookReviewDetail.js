@@ -81,9 +81,9 @@ class BookReviewDetail extends Component {
     });
   }
 
-  renderBookReviewCommentBest({item: rowData}) {
+  renderBookReviewCommentBest({item: rowData, index}) {
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={index}>
         <Image
           style={styles.itemImage}
           source={
@@ -106,7 +106,8 @@ class BookReviewDetail extends Component {
                 marginRight: 14,
               }}>
               <Icon
-                name="ios-heart-outline"
+                type="feather"
+                name="heart"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -243,7 +244,8 @@ class BookReviewDetail extends Component {
               <View style={{alignItems: 'center'}}>
                 <Text>{bookReview.bookReviewDetail.helpful.yes}</Text>
                 <Icon
-                  name="ios-thumbs-up-outline"
+                  type="feather"
+                  name="thumbs-up"
                   size={15}
                   color={config.css.fontColor.desc}>
                   <Text style={{fontSize: config.css.fontSize.desc}}>赞同</Text>
@@ -252,7 +254,8 @@ class BookReviewDetail extends Component {
               <View style={{alignItems: 'center'}}>
                 <Text>{bookReview.bookReviewDetail.helpful.no}</Text>
                 <Icon
-                  name="ios-thumbs-down-outline"
+                  type="feather"
+                  name="thumbs-down"
                   size={15}
                   color={config.css.fontColor.desc}>
                   <Text style={{fontSize: config.css.fontSize.desc}}>反对</Text>
@@ -266,6 +269,9 @@ class BookReviewDetail extends Component {
                   enableEmptySections={true}
                   data={bookReview.bookReviewDetailCommentBest}
                   renderItem={this.renderBookReviewCommentBest.bind(this)}
+                  keyExtractor={(item, index) => {
+                    return index.toString();
+                  }}
                 />
               </View>
             ) : null}

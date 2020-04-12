@@ -85,7 +85,7 @@ class BookHelpDetail extends Component {
 
   renderBookHelpCommentBest({item: rowData, index}) {
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={index}>
         <Image
           style={styles.itemImage}
           source={
@@ -108,7 +108,8 @@ class BookHelpDetail extends Component {
                 marginRight: 14,
               }}>
               <Icon
-                name="ios-heart-outline"
+                type="feather"
+                name="heart"
                 size={15}
                 color={config.css.fontColor.desc}
               />
@@ -125,7 +126,7 @@ class BookHelpDetail extends Component {
 
   renderBookHelpComment({item: rowData, index}) {
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={index}>
         <Image
           style={styles.itemImage}
           source={
@@ -202,6 +203,9 @@ class BookHelpDetail extends Component {
                   enableEmptySections={true}
                   data={bookHelp.bookHelpDetailCommentBest}
                   renderItem={this.renderBookHelpCommentBest.bind(this)}
+                  keyExtractor={(item, index) => {
+                    return index.toString();
+                  }}
                 />
               </View>
             ) : null}
@@ -245,6 +249,9 @@ class BookHelpDetail extends Component {
             renderItem={this.renderBookHelpComment.bind(this)}
             ListHeaderComponent={this.renderHeader.bind(this)}
             ListFooterComponent={this.renderFooter.bind(this)}
+            keyExtractor={(item, index) => {
+              return index.toString();
+            }}
           />
         )}
       </View>

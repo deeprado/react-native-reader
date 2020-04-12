@@ -94,6 +94,7 @@ class CategoryList extends Component {
   renderCategoryListFemale({item: rowData, index}) {
     return (
       <TouchableOpacity
+        key={index}
         style={styles.item}
         activeOpacity={0.5}
         onPress={() => this._goToCategoryDetail(false, rowData.name)}>
