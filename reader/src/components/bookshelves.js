@@ -11,6 +11,7 @@ import {
   Text,
   Modal,
   FlatList,
+  SafeAreaView,
 } from 'react-native';
 
 import config from '../common/config';
@@ -191,7 +192,7 @@ export default class Bookshelves extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <SafeAreaView style={{flex: 1}}>
         <CommonHeader navigation={this.props.navigation} />
 
         {this.state.bookshelves && this.state.bookshelves.length > 0 ? (
@@ -245,7 +246,7 @@ export default class Bookshelves extends Component {
             </TouchableOpacity>
           </Modal>
         ) : null}
-      </View>
+      </SafeAreaView>
     );
   }
 }

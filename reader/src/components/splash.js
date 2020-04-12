@@ -3,9 +3,16 @@
  */
 
 import React, {Component} from 'react';
-import {View, Image, StatusBar, StyleSheet} from 'react-native';
+import {
+  ImageBackground,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+} from 'react-native';
 
 import Dimen from '../utils/dimensionsUtil';
+
+const barHeight = Dimen.isIphoneX() ? 146 : 44;
 
 export default class Splash extends Component {
   // 倒计时2秒后进入首页
@@ -22,14 +29,14 @@ export default class Splash extends Component {
 
   render() {
     return (
-      <View style={styles.root}>
+      <SafeAreaView style={styles.root}>
         <StatusBar hidden={true} />
-        <Image
+        <ImageBackground
           style={styles.image}
           source={require('../assets/imgs/splash.jpg')}
           resizeMode={'cover'}
         />
-      </View>
+      </SafeAreaView>
     );
   }
 }
@@ -40,6 +47,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: Dimen.window.width,
-    height: Dimen.window.height + 44,
+    height: Dimen.window.height + barHeight,
+    position: 'absolute',
+    top: -barHeight,
   },
 });

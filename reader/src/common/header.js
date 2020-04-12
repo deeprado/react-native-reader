@@ -9,14 +9,9 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Header, Icon} from 'react-native-elements';
 
-import {
-  Menu,
-  MenuProvider,
-  MenuOptions,
-  MenuOption,
-  MenuTrigger,
-  renderers,
-} from 'react-native-popup-menu';
+import Dimen from '../utils/dimensionsUtil';
+
+const barHeight = Dimen.isIphoneX() ? 146 : 44;
 
 import config from './config';
 
@@ -94,4 +89,5 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
 });
+
 export default CommonHeader;

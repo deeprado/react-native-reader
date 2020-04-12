@@ -4,7 +4,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, BackHandler, StatusBar} from 'react-native';
+import {View, BackHandler, StatusBar, Text, SafeAreaView} from 'react-native';
 
 import AppContainer from './navigator';
 import config from './common/config';
@@ -38,16 +38,18 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <SafeAreaView
+        style={{flex: 1, backgroundColor: config.css.color.appMainColor}}>
         <StatusBar
           backgroundColor={config.css.color.appMainColor}
           translucent={true}
           showHideTransition={'slide'}
           animated={true}
           hidden={false}
+          barStyle="default"
         />
         <AppContainer />
-      </View>
+      </SafeAreaView>
     );
   }
 }
