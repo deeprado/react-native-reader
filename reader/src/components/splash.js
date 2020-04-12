@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
   },
   image: {
     width: Dimen.window.width,
-    height: Dimen.window.height,
+    height: Dimen.window.height + 44,
   },
 });

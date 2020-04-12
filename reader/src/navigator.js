@@ -152,7 +152,6 @@ let AppAllStack = createStackNavigator(
       screen: AuthorBookList,
       navigationOptions: commonNavigationOptions,
     },
-
     BookDiscussionDetail: {
       screen: BookDiscussionDetail,
       navigationOptions: commonNavigationOptions,

@@ -41,4 +41,5 @@ request.post = (url, body, successCallBack, failCallBack) => {
       failCallBack && failCallBack(error);
     });
 };
-module.exports = request;
+
+export default request;

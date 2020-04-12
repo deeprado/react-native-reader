@@ -14,7 +14,6 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
 import {connect} from 'react-redux';
 
 import config from '../../common/config';
@@ -97,7 +96,6 @@ class Charts extends Component {
   }
 
   render() {
-    const {charts} = this.props;
     return (
       <View style={styles.container}>
         <ToolBar leftClick={this._back.bind(this)} title="排行榜" />
@@ -214,9 +212,8 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(store) {
-  const {charts} = store;
   return {
-    charts,
+    charts: store.charts,
   };
 }
 

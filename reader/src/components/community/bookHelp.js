@@ -141,7 +141,8 @@ class BookHelp extends Component {
               <Icon
                 name="ios-chatbubbles-outline"
                 size={15}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>{rowData.commentCount}</Text>
             </View>
           </View>

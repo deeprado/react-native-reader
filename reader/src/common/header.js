@@ -5,9 +5,19 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Header, Icon} from 'react-native-elements';
+
+import {
+  Menu,
+  MenuProvider,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger,
+  renderers,
+} from 'react-native-popup-menu';
+
 import config from './config';
 
 class CommonHeader extends Component {
@@ -15,6 +25,7 @@ class CommonHeader extends Component {
     super(props);
     this.state = {
       title: props.title ? props.title : '简阅',
+      opened: true,
     };
     this._goSearch = this._goSearch.bind(this);
   }
@@ -25,30 +36,34 @@ class CommonHeader extends Component {
 
   _other() {}
 
+  onOptionSelect(value) {
+    this.setState({opened: false});
+  }
+
+  onTriggerPress() {
+    this.setState({opened: true});
+  }
+
+  onBackdropPress() {
+    this.setState({opened: false});
+  }
+
   renderLeftComponent() {
     return null;
   }
 
   renderRightComponent() {
     return (
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <View
-          style={{
-            marginRight: 20,
-          }}>
-          <Icon
-            name="search"
-            color="#fff"
-            type="feather"
-            size={20}
-            onPress={this._goSearch}
-          />
+      <View style={styles.rightBox}>
+        <View style={styles.searchBox}>
+          <TouchableOpacity onPress={this._goSearch}>
+            <Icon name="search" color="#fff" type="feather" size={20} />
+          </TouchableOpacity>
         </View>
-        <View
-          style={{
-            marginRight: 20,
-          }}>
-          <Icon name="plus" color="#fff" type="feather" onPress={this._other} />
+        <View style={styles.menuBox}>
+          <TouchableOpacity onPress={this._other}>
+            <Icon name="plus" color="#fff" type="feather" />
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -70,4 +85,13 @@ class CommonHeader extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  rightBox: {flexDirection: 'row', alignItems: 'center'},
+  searchBox: {
+    marginRight: 20,
+  },
+  menuBox: {
+    marginRight: 20,
+  },
+});
 export default CommonHeader;

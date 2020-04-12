@@ -172,7 +172,8 @@ class BookReview extends Component {
               <Icon
                 name="ios-thumbs-up-outline"
                 size={15}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>
                 {rowData.helpful.yes + '人推荐'}
               </Text>

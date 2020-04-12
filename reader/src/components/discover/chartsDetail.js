@@ -3,11 +3,9 @@
  */
 
 import React, {Component} from 'react';
-import {Image, Text, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import ScrollableTabView, {
-  DefaultTabBar,
-} from 'react-native-scrollable-tab-view';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
 import TabBarOnlyText from '../../weight/TabBarOnlyText';
 import config from '../../common/config';

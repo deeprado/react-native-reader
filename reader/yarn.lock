@@ -6177,6 +6177,11 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.npm.taobao.org/react-native-iphone-x-helper/download/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha1-ZF4v+7tJ6AhEu0y740oSb9oeZ3I=
 
+react-native-popup-menu@^0.15.7:
+  version "0.15.7"
+  resolved "https://registry.npm.taobao.org/react-native-popup-menu/download/react-native-popup-menu-0.15.7.tgz#ddffa8aa6e5d7d11533947921e9bdf94cd7fc7d0"
+  integrity sha1-3f+oqm5dfRFTOUeSHpvflM1/x9A=
+
 react-native-ratings@^6.3.0:
   version "6.5.0"
   resolved "https://registry.npm.taobao.org/react-native-ratings/download/react-native-ratings-6.5.0.tgz#a1606ccba3c5b54eec8e6cfa4765a45cf0e4ab8d"

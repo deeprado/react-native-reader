@@ -123,7 +123,7 @@ class Search extends Component {
         this.setState({searchHistory: array});
       })
       .catch((err) => {
-        if (err.name == 'NotFoundError') {
+        if (err.name === 'NotFoundError') {
           let searchStorage = {
             search: [],
           };
@@ -244,14 +244,16 @@ class Search extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Icon
-            type="feather"
-            name="chevron-left"
-            style={styles.headerIcon}
-            size={25}
-            color={config.css.color.appBlack}
-            onPress={this._back.bind(this)}
-          />
+          <TouchableOpacity onPress={this._back.bind(this)}>
+            <Icon
+              type="feather"
+              name="chevron-left"
+              style={styles.headerIcon}
+              size={25}
+              color={config.css.color.appBlack}
+            />
+          </TouchableOpacity>
+
           <TextInput
             style={styles.headerTextInput}
             value={this.state.searchWords}

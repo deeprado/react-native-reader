@@ -13,8 +13,6 @@ import {
   FlatList,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
-
 import request from '../../utils/httpUtil';
 import config from '../../common/config';
 import Dimen from '../../utils/dimensionsUtil';
@@ -87,7 +85,7 @@ export default class ChartsDetailTab extends Component {
           <View style={styles.itemBody}>
             <Text style={styles.itemTitle}>{rowData.title}</Text>
             <Text style={styles.itemDesc}>
-              {rowData.author + ' | ' + rowData.cat}
+              {rowData.author + ' | ' + (rowData.cat ? rowData.cat : '其他')}
             </Text>
             <Text style={styles.itemDesc} numberOfLines={1}>
               {rowData.shortIntro}

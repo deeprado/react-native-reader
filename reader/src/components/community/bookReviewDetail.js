@@ -108,7 +108,8 @@ class BookReviewDetail extends Component {
               <Icon
                 name="ios-heart-outline"
                 size={15}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>
                 {rowData.likeCount + '次同感'}
               </Text>

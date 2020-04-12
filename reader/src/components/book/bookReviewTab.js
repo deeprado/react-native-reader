@@ -136,7 +136,8 @@ class BookReviewTab extends Component {
               <Icon
                 name="ios-thumbs-up-outline"
                 size={15}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemIconText}>{rowData.helpful.yes}</Text>
             </View>
           </View>

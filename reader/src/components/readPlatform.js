@@ -633,7 +633,8 @@ export default class ReadPlatform extends Component {
           onPress={() => {
             this.setState({showControlStation: false});
           }}
-          style={{flex: 1}}></Text>
+          style={{flex: 1}}
+        />
         <View style={[styles.control, {height: 50}]}>
           <TouchableOpacity
             style={styles.controlFooterItem}

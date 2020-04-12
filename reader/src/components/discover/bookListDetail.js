@@ -156,7 +156,7 @@ export default class BookListDetail extends Component {
               </Text>
             </View>
           </View>
-          <View style={styles.itemLine}></View>
+          <View style={styles.itemLine} />
           <View style={styles.itemBottom}>
             <Text style={styles.itemDesc}>{rowData.book.longIntro}</Text>
           </View>

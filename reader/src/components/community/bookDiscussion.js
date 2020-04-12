@@ -146,19 +146,22 @@ class BookDiscussion extends Component {
               <Icon
                 name="ios-chatbubbles-outline"
                 size={15}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>{rowData.commentCount}</Text>
               <Icon
                 name="ios-stats-outline"
                 size={15}
                 style={{marginLeft: 10}}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>{rowData.voteCount}</Text>
               <Icon
                 name="ios-heart-outline"
                 size={15}
                 style={{marginLeft: 10}}
-                color={config.css.fontColor.desc}></Icon>
+                color={config.css.fontColor.desc}
+              />
               <Text style={styles.itemDesc}>{rowData.likeCount}</Text>
             </View>
           </View>
