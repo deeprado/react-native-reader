@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint --fix --ext .js src"
+    "lint": "eslint --fix --ext .js src",
+    "bundle:ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js --platform ios --dev false --bundle-output ./bundle/ios/main.jsbundle --assets-dest ./bundle/ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",
