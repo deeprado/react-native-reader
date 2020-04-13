@@ -48,6 +48,7 @@
 		00E356F21AD99517003FC87E /* readerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = readerTests.m; sourceTree = "<group>"; };
 		051674022443861900B2134E /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = ../bundle/ios/main.jsbundle; sourceTree = "<group>"; };
 		051674032443861900B2134E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../bundle/ios/assets; sourceTree = "<group>"; };
+		0F8009F0AF85985E613616FE /* Pods-reader-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-reader-tvOSTests/Pods-reader-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reader/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reader/AppDelegate.m; sourceTree = "<group>"; };
@@ -55,20 +56,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reader/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reader/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reader/main.m; sourceTree = "<group>"; };
-		17D787505A59E20C876253AE /* Pods-reader-readerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-readerTests.debug.xcconfig"; path = "Target Support Files/Pods-reader-readerTests/Pods-reader-readerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* reader-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reader-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* reader-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reader-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4160987C70CB9EFEA0C86B1F /* Pods-reader-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reader-tvOSTests/Pods-reader-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43A050D17D49FE1077BFB0D9 /* Pods-reader-readerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-readerTests.release.xcconfig"; path = "Target Support Files/Pods-reader-readerTests/Pods-reader-readerTests.release.xcconfig"; sourceTree = "<group>"; };
 		47BC0A4F953FF2C58C06E954 /* libPods-reader-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reader-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D834D6B6ADD3C9A227E0ED8 /* Pods-reader-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-reader-tvOS/Pods-reader-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6AB32C4569BE82FCFDA57641 /* Pods-reader-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOS.release.xcconfig"; path = "Target Support Files/Pods-reader-tvOS/Pods-reader-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		72D25A353FC759F1AD6A23EB /* libPods-reader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75F369BB24AA1DDC767B6655 /* Pods-reader-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reader-tvOSTests/Pods-reader-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		816BB2F5C6BF94490AFEE55A /* Pods-reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader.release.xcconfig"; path = "Target Support Files/Pods-reader/Pods-reader.release.xcconfig"; sourceTree = "<group>"; };
-		B11557A10016A1B86C549DFB /* Pods-reader-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-reader-tvOSTests/Pods-reader-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		C70935ADC2E666D89CA5FFEE /* Pods-reader-readerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-readerTests.release.xcconfig"; path = "Target Support Files/Pods-reader-readerTests/Pods-reader-readerTests.release.xcconfig"; sourceTree = "<group>"; };
+		733743AEA2529679357DA7F9 /* Pods-reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader.release.xcconfig"; path = "Target Support Files/Pods-reader/Pods-reader.release.xcconfig"; sourceTree = "<group>"; };
+		9E74B56C1FCB3DC039ADD141 /* Pods-reader-readerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-readerTests.debug.xcconfig"; path = "Target Support Files/Pods-reader-readerTests/Pods-reader-readerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEC78A891A76CCBFAFC9CBAF /* Pods-reader-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOS.release.xcconfig"; path = "Target Support Files/Pods-reader-tvOS/Pods-reader-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C14A7D0BE4D5BA116C8D53CF /* Pods-reader-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-reader-tvOS/Pods-reader-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C193F070E2847466D83ED138 /* Pods-reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader.debug.xcconfig"; path = "Target Support Files/Pods-reader/Pods-reader.debug.xcconfig"; sourceTree = "<group>"; };
 		C9423D28B17309F7C94BB960 /* libPods-reader-readerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reader-readerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7A0053D4D3387E11C26C55 /* libPods-reader-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reader-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7A116B4E1EF244526752D6D /* Pods-reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reader.debug.xcconfig"; path = "Target Support Files/Pods-reader/Pods-reader.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -170,7 +170,7 @@
 				00E356EF1AD99517003FC87E /* readerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				849A6BDF97A92E6F8AB2B242 /* Pods */,
+				A1CD7B2C0D8FE9D4CA0BD8C4 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -188,18 +188,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		849A6BDF97A92E6F8AB2B242 /* Pods */ = {
+		A1CD7B2C0D8FE9D4CA0BD8C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E7A116B4E1EF244526752D6D /* Pods-reader.debug.xcconfig */,
-				816BB2F5C6BF94490AFEE55A /* Pods-reader.release.xcconfig */,
-				17D787505A59E20C876253AE /* Pods-reader-readerTests.debug.xcconfig */,
-				C70935ADC2E666D89CA5FFEE /* Pods-reader-readerTests.release.xcconfig */,
-				5D834D6B6ADD3C9A227E0ED8 /* Pods-reader-tvOS.debug.xcconfig */,
-				6AB32C4569BE82FCFDA57641 /* Pods-reader-tvOS.release.xcconfig */,
-				75F369BB24AA1DDC767B6655 /* Pods-reader-tvOSTests.debug.xcconfig */,
-				B11557A10016A1B86C549DFB /* Pods-reader-tvOSTests.release.xcconfig */,
+				C193F070E2847466D83ED138 /* Pods-reader.debug.xcconfig */,
+				733743AEA2529679357DA7F9 /* Pods-reader.release.xcconfig */,
+				9E74B56C1FCB3DC039ADD141 /* Pods-reader-readerTests.debug.xcconfig */,
+				43A050D17D49FE1077BFB0D9 /* Pods-reader-readerTests.release.xcconfig */,
+				C14A7D0BE4D5BA116C8D53CF /* Pods-reader-tvOS.debug.xcconfig */,
+				BEC78A891A76CCBFAFC9CBAF /* Pods-reader-tvOS.release.xcconfig */,
+				4160987C70CB9EFEA0C86B1F /* Pods-reader-tvOSTests.debug.xcconfig */,
+				0F8009F0AF85985E613616FE /* Pods-reader-tvOSTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -689,7 +690,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17D787505A59E20C876253AE /* Pods-reader-readerTests.debug.xcconfig */;
+			baseConfigurationReference = 9E74B56C1FCB3DC039ADD141 /* Pods-reader-readerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -712,7 +713,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C70935ADC2E666D89CA5FFEE /* Pods-reader-readerTests.release.xcconfig */;
+			baseConfigurationReference = 43A050D17D49FE1077BFB0D9 /* Pods-reader-readerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -732,7 +733,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A116B4E1EF244526752D6D /* Pods-reader.debug.xcconfig */;
+			baseConfigurationReference = C193F070E2847466D83ED138 /* Pods-reader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -764,7 +765,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 816BB2F5C6BF94490AFEE55A /* Pods-reader.release.xcconfig */;
+			baseConfigurationReference = 733743AEA2529679357DA7F9 /* Pods-reader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -790,7 +791,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D834D6B6ADD3C9A227E0ED8 /* Pods-reader-tvOS.debug.xcconfig */;
+			baseConfigurationReference = C14A7D0BE4D5BA116C8D53CF /* Pods-reader-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -818,7 +819,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AB32C4569BE82FCFDA57641 /* Pods-reader-tvOS.release.xcconfig */;
+			baseConfigurationReference = BEC78A891A76CCBFAFC9CBAF /* Pods-reader-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -846,7 +847,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75F369BB24AA1DDC767B6655 /* Pods-reader-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 4160987C70CB9EFEA0C86B1F /* Pods-reader-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -873,7 +874,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B11557A10016A1B86C549DFB /* Pods-reader-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 0F8009F0AF85985E613616FE /* Pods-reader-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
